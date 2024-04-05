@@ -1,6 +1,3 @@
-# Djago Project
-
-
 <p align="center">
     <img alt="TODO" src="./django-image.png" width="70%" />
 </p>

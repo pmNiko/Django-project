@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="TODO" src="./django-image.png" width="70%" />
+    <img alt="TODO" src="./images/django-image.png" width="70%" />
 </p>
 
 _____
@@ -28,10 +28,21 @@ _Iniciamos instalando virtualenv y posteriormente cremaos nuestro entorno virtua
 ```text
 /djangoproject
 ├── venv/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+├-- mysite
+|   ├── __init__.py
+|   ├── __pycache__
+|   │   ├── __init__.cpython-312.pyc
+|   │   ├── settings.cpython-312.pyc
+|   │   ├── urls.cpython-312.pyc
+|   │   └── wsgi.cpython-312.pyc
+|   ├── asgi.py
+|   ├── settings.py
+|   ├── urls.py
+|   └── wsgi.py
+|
+|-- db.sqlite3
+|-- manage.py
+|-- Readme.md
 ```
 
 _Switcheamos la activación del entorno virtual_
@@ -39,10 +50,6 @@ _Switcheamos la activación del entorno virtual_
 `$ source venv/bin/activate`
 
 `$ deactivate`
-
----
-
-<br/><br/>
 
 ---
 
@@ -55,7 +62,6 @@ _Switcheamos la activación del entorno virtual_
 > - Vamos a installar las dependencias necesarias para armar el scaffold 
 > - Una vez creado el cascaron inicial podremos ver la estructura de nuestro proyecto
 > 
-> \_\_
 
 <br>
 
@@ -72,3 +78,15 @@ _Comprobación de la versión del módulo instalado_
     >>> import django
     >>> django.get_version()
 ```
+
+_Creación del proyecto_
+
+`$ django-admin startproject mysite .`
+
+_Corremos el server_
+
+`$ python manage.py runserver`
+
+[url del proyecto](http://localhost:8000)
+
+

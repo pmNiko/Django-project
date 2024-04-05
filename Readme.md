@@ -89,4 +89,8 @@ _Corremos el server_
 
 [url del proyecto](http://localhost:8000)
 
+`$ python manage.py runserver 3000`
+
+[url del proyecto](http://localhost:3000)
+
 

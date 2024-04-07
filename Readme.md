@@ -128,3 +128,19 @@ blog
 └── views.py
 ```
 
+<br/>
+
+---
+---
+
+<br/>
+
+
+> [!NOTE]
+>
+> **DB & Models**
+>
+> - Las migraciones representan cambios incrementales en la base de datos
+> - Podemos listarlas **python manage.py showmigrations**
+> - Para realizar migraciones basadas en los cambios en el modelo **python manage.py makemigrations**
+> - Finalmente impactamos los cambios en la BD con **python manage.py migrate**

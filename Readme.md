@@ -195,3 +195,45 @@ INSTALLED_APPS = [
     t1 = Task(title="Install Android JDK", description="Should download tools for develop on VScode", project_id=2)
     t2.save()
 ```
+
+
+<br/>
+
+---
+---
+
+<br/>
+
+
+> [!NOTE]
+>
+> **Params**
+>
+> - Enfocamos en la estrategia de search params
+> - Se debe tener en cuenta el tipo de dato que se recibirá
+> - Informamos a nuestra fn de la view con que nombre lo reconocerá
+> - Adicionalmente podemos realizar consultas a la BD y retornar nuestra información a la vista del cliente
+
+- urls.py
+```py
+urlpatterns = [
+    path('', views.index),
+    path('about', views.about),
+    path('hello/<str:username>', views.hello),
+    # path('hello/<int:id>', views.hello),
+    path('projects', views.projects),
+    path('tasks/<int:id>', views.tasks),
+]
+```
+- views.py
+```py
+def projects(request):
+    projects = list(Project.objects.values())
+    return JsonResponse(projects, safe=False)
+
+
+def tasks(request, id):
+    # task = Task.objects.get(id=id)
+    task = get_object_or_404(Task,id=id)
+    return HttpResponse(f'task: {task.title}')
+```

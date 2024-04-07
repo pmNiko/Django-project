@@ -93,4 +93,38 @@ _Corremos el server_
 
 [url del proyecto](http://localhost:3000)
 
+<br/>
+
+---
+---
+
+<br/>
+
+
+> [!NOTE]
+>
+> **Creación de aplicaciones**
+>
+> - Las apllicaciones en Django representan unidades homogeneas de desarrollo
+> - Un proyecto en Django puede estar formado por multiples apps 
+> - Estas pueden ser acopladas de manera sencilla al proyecto y asi mismo desacoplarse con facilidad 
+> - Simplemente se crea una nueva app y **se instala** en el proyecto 
+> - En la sección **urls** de mysite asociamos una nueva ruta con una vista que hayamos definido
+> - Este es un primer enfoque para entender el funcionamiento
+> - Un enfoque más eñegante seria utilizar el include de django para crear las rutas en cada app e incluir la app en **mysite**
+
+
+`$ python manage.py startapp blog`
+
+```text
+blog
+├── __init__.py
+├── admin.py
+├── apps.py
+├── migrations
+│   └── __init__.py
+├── models.py
+├── tests.py
+└── views.py
+```
 

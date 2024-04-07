@@ -144,3 +144,20 @@ blog
 > - Podemos listarlas **python manage.py showmigrations**
 > - Para realizar migraciones basadas en los cambios en el modelo **python manage.py makemigrations**
 > - Finalmente impactamos los cambios en la BD con **python manage.py migrate**
+> - Para lograr este objetivo debemos conectar nuestra app al proyecto en **/mysite/settings.py**
+> - De esta manera facilmente podemos escalar nuestros modelos e impactarlos enla BD
+
+- settings.py /mysite
+```py
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'blog'
+]
+```

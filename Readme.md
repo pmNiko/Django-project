@@ -161,3 +161,37 @@ INSTALLED_APPS = [
     'blog'
 ]
 ```
+
+<br/>
+
+---
+---
+
+<br/>
+
+
+> [!NOTE]
+>
+> **Django Shell**
+>
+> - El shell de Django nos permite importar los archivos del proyecto e interactuar con ellos
+> - Podemos acceder a el con **python manage.py shell** y salir de el **exit() o CTRL+D**
+> - A continuación podemos ver la creación de registros en la BD a través de los modelos
+
+```shell
+    from blog.models import Project, Task
+
+    p1 = Project(name="Web App")
+    p1.save()
+
+    p2 = Project(name="Movil App")
+    p2.save()
+
+    Project.objects.all()
+    Project.objects.get(id=1)
+
+    p1.task_set.create(title='Download Node JS')
+
+    t1 = Task(title="Install Android JDK", description="Should download tools for develop on VScode", project_id=2)
+    t2.save()
+```

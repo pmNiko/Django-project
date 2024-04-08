@@ -237,3 +237,22 @@ def tasks(request, id):
     task = get_object_or_404(Task,id=id)
     return HttpResponse(f'task: {task.title}')
 ```
+
+<br/>
+
+---
+---
+
+<br/>
+
+
+> [!NOTE]
+>
+> **Django Admin - Panel**
+>
+> - Un enfoque tipico en este tipo de frameworks fullstack es contar con un panel de admin
+> - Django no es la excepción, de hecho la ruta que viene por defecto es **admin/**
+> - Solo nos falta el supersuser y acceder a la url del panel
+
+` $ python manage.py createsuperuser `
+

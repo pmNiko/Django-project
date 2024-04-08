@@ -1,7 +1,11 @@
-<h2>About Page</h2>
+{% extends "layouts/base.html" %}
 
-<p><strong>{{phrase}}</strong></p>
+{% block content %}
+    <h2>About Page</h2>
 
-<p>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non velit aperiam nostrum, quos nisi eaque recusandae itaque ullam, ratione sed a? Sed dolorem dolore neque minima? Explicabo porro eum blanditiis sed. Asperiores ab, distinctio dolores quidem vel labore expedita obcaecati.
-</p>
+    <p><strong>{{phrase}}</strong></p>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non velit aperiam nostrum, quos nisi eaque recusandae itaque ullam, ratione sed a? Sed dolorem dolore neque minima? Explicabo porro eum blanditiis sed. Asperiores ab, distinctio dolores quidem vel labore expedita obcaecati.
+    </p>
+{% endblock content %}

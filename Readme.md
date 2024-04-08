@@ -271,3 +271,20 @@ def tasks(request, id):
 > - Para retornar páginas html vamos a crear la carpeta **templates**
 > - Y dentro crearemos nuestras páginas para retornarlas mediante el método render de Django
 > - Para enviar datos a la vista solo debemos definir un diccionario de valores e interpolarlos en el html
+
+<br/>
+
+---
+---
+
+<br/>
+
+
+> [!NOTE]
+>
+> **Templates Inheritance**
+>
+> - Django utiliza **jinja** como motor de plantillas para renderear html con lógica de datos 
+> - Esta nos permite heredar templates html para reutilizar código 
+> - Esta estrategia utiliza las palabras reserbadas para definir el template a heredar **block**
+> - E indicamos en el template a heredarlo con **extends** y envolvemos nuestro html con **block**

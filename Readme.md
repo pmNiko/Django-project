@@ -256,3 +256,18 @@ def tasks(request, id):
 
 ` $ python manage.py createsuperuser `
 
+<br/>
+
+---
+---
+
+<br/>
+
+
+> [!NOTE]
+>
+> **Render**
+>
+> - Para retornar páginas html vamos a crear la carpeta **templates**
+> - Y dentro crearemos nuestras páginas para retornarlas mediante el método render de Django
+> - Para enviar datos a la vista solo debemos definir un diccionario de valores e interpolarlos en el html

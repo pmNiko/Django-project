@@ -288,3 +288,20 @@ def tasks(request, id):
 > - Esta nos permite heredar templates html para reutilizar código 
 > - Esta estrategia utiliza las palabras reserbadas para definir el template a heredar **block**
 > - E indicamos en el template a heredarlo con **extends** y envolvemos nuestro html con **block**
+
+<br/>
+
+---
+---
+
+<br/>
+
+
+> [!NOTE]
+>
+> **Django Form**
+>
+> - Django ya cuenta con un módulo para trabajar con formulario 
+> - Por lo tanto solo debemos heredar su módulo **forms** para lograr los inputs necesarios 
+> - CSRF es un token de seguridad que agrega el framework para trabajar con solicitudes securizadas
+

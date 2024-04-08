@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <h1>Creación de la nueva tareas</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <br>
+        {{ form }}
+        <input type="submit" value="Guardar">
+    </form>    
+{% endblock content %}

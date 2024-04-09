@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Project, Task
 from .forms import CreateNewtask, CreateNewProject
 
@@ -61,3 +61,14 @@ def create_project(request):
             name = request.POST["name"]
         )
         return redirect("projects")
+    
+def project_show(request, id):
+    # project = Project.objects.get(id=id)
+    project = get_object_or_404(Project,id=id)
+    tasks = Task.objects.filter(project_id=id)
+    count_tasks = len(tasks)
+    return render(request, 'projects/show.html', {
+        'project': project,
+        'tasks': tasks,
+        'count_tasks': count_tasks
+    })

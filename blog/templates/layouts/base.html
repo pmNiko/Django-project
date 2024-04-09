@@ -1,15 +1,44 @@
-<nav>
-    <ul>
-        <li>
-            <a href="{%url 'home'%}">Home</a>
-            <a href="{%url 'projects'%}">Proyectos</a>
-            <a href="{%url 'tasks'%}">Tareas</a>
-            <a href="{%url 'create_task'%}">Crear Tarea</a>
-            <a href="{%url 'create_project'%}">Crear Proyecto</a>
-            <a href="{%url 'about'%}">Sobre nosotros</a>
-        </li>
-    </ul>
-</nav>
+{% load static %}
 
-{% block content %}{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/main.css' %}">
+
+    <title>Django Project</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="{%url 'home'%}">Home</a>
+            </li>
+            <li>
+                <a href="{%url 'projects'%}">Proyectos</a>
+            </li>
+            <li>
+                <a href="{%url 'tasks'%}">Tareas</a>
+            </li>
+            <li>
+                <a href="{%url 'create_task'%}">Crear Tarea</a>
+            </li>
+            <li>
+                <a href="{%url 'create_project'%}">Crear Proyecto</a>
+            </li>
+            <li>
+                <a href="{%url 'about'%}">Sobre nosotros</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- Aqui se insertarán los parcel -->
+        {% endblock content %}
+    </main>
+    
+</body>
+</html>
 

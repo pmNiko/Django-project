@@ -3,18 +3,20 @@
 {% block content %}
     <h1>Tasks</h1>
 
-    {% for task in tasks %}
-        <div>        
-            <h4> 
-                {% if task.done %}✅{% else %}⏰{% endif %} 
-                {{task.title}}
-            </h4>
-            
-            <p>{{task.description}}</p>
-            <h5>Project: {{task.project}}</h5>
-            
-            <button>Delete</button>
-            <button>✅ Done</button>
-        </div>
-    {% endfor %}
+    <div class="card-container">        
+        {% for task in tasks %}
+            <div class="card">
+                <h4> 
+                    {% if task.done %}✅{% else %}⏰{% endif %} 
+                    {{task.title}}
+                </h4>
+                
+                <p>{{task.description}}</p>
+                <h5>Project: {{task.project}}</h5>
+                
+                <button class="button" >Delete</button>
+                <button class="button" >✅ Done</button>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}

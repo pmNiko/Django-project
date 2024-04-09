@@ -3,12 +3,13 @@
 {% block content %}
     <h1>Projects</h1>
 
-    <th>
+    <div class="card-container">
         {% for item in projects %}
-        <td>{{item.name}}</td>
-        <!-- <tr>
-            <td>{{item.name}}</td>
-        </tr> -->
+            <card class="card">
+                <a href="projects/{{item.id}}">
+                    ☘️ {{item.name}}
+                </a>
+            </card>
         {% endfor %}
-    </th>
+    </div>
 {% endblock content %}

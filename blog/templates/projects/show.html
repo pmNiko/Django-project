@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <h4>Vista Puntual del Proyecto</h4>
+
+    <div class="card-container">
+    <card class="card">
+        <h4>Proyecto Nº {{project.id}}</h4>
+        <h5>{{project.name}}</h5>
+        <p>Contiene {{count_tasks}} tareas</p>
+
+        <ul>
+            {% for task in tasks %}
+               <li> {{task.title}} </li>
+            {% endfor %}
+        </ul>
+            
+        <a href="/projects" class="button">
+            Regresar
+        </a>
+    </card>
+    </div>
+
+{% endblock content %}

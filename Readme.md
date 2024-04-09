@@ -304,4 +304,5 @@ def tasks(request, id):
 > - Django ya cuenta con un módulo para trabajar con formulario 
 > - Por lo tanto solo debemos heredar su módulo **forms** para lograr los inputs necesarios 
 > - CSRF es un token de seguridad que agrega el framework para trabajar con solicitudes securizadas
+> - Adicionalmente podemos añadir alisa a nuestras urls para hacer referencia a ellas invocandolas con su **name**
 
